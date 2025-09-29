@@ -19,6 +19,18 @@
             text-align: center;
             font-size: large;
         }
+
+        html {
+            font-family: sans-serif;
+        }
+
+        bdi {
+            /* Add your styles here */
+        }
+
+        .name {
+            color: red;
+        }
     </style>
 </head>
 
@@ -30,6 +42,7 @@
     </header>
     <nav>
         <ul>
+            <!-- a -->
             <li><a href="#dogs-or-cats">Jump to Dogs vs Cats Section</a></li>
         </ul>
     </nav>
@@ -37,17 +50,21 @@
         <p>Another paragraph here
         <p>And another!
         <p>I r e a l l y like WHITESPACE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;don't you?</P>
+        <!-- pre -->
         <pre>
             What
                 about now?
         </pre>
         <p>This is fun isn't it?</p>
         <p>day ever!</p>
-        <yes-sir>It complete is a <b>great</b> day for writing trashy HTML!</yes-sir>
+        <!-- abbr -->
+        <yes-sir>It complete is a <b>great</b> day for writing trashy <abbr title="HTNL">HTML!</abbr></yes-sir>
+        <!-- Address -->
         <address>
             <a href="mailto:jdulce@sandiego.edu">jdulce@sandiego.edu</a><br />
             <a href="tel:+18888888">+1 (888) 888-8888</a>
         </address>
+        <!-- Article -->
         <article class="forecast">
             <h1>Todo LIst</h1>
             <article class="day-forecast">
@@ -67,17 +84,98 @@
             </article>
         </article>
         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+        <!-- Aside -->
         <aside>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque
+                faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
         </aside>
+        <!-- Hgroup -->
         <hgroup id="dogs-or-cats">
             <h1>Dogs or Cats</h1>
             <p>(dogs are better)</p>
         </hgroup>
+        <!-- Section -->
         <section>
             <h3>This is a h3</h3>
             <p>There are many other headers</p>
         </section>
+        <!-- Search, Form, Label, button -->
+        <h1>Vegetable Finder</h1>
+        <search>
+            <form action="./search/">
+                <label for="vegetable">Find a Vegetable</label>
+                <input type="search" id="vegetable" name="vegetable" />
+                <button type="submit">Search</button>
+            </form>
+        </search>
+        <!-- Block Quote, Div -->
+        <div>
+            <blockquote cite="https://www.huxley.net/bnw/four.html">
+                <p>
+                    <b>"Why Not?"</b>
+                </p>
+            </blockquote>
+            <p><i>—Francis Ortiz,</i> <cite>Comp 305</cite></p>
+        </div>
+        <p>Cryptids of Cornwall:</p>
+        <!-- dl, dt, dd -->
+        <dl>
+            <dt>Beast of Bodmin</dt>
+            <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+            <dt>Morgawr</dt>
+            <dd>A sea serpent.</dd>
+
+            <dt>Owlman</dt>
+            <dd>A giant owl-like creature.</dd>
+        </dl>
+        <!-- hr -->
+        <hr>
+        <!-- figure, img, figcaption -->
+        <figure>
+            <h4>They come out at night</h4>
+            <img src="../img/pixelatedveg.gif" alt="dancing vegetables" />
+            <figcaption>dancing vegetables</figcaption>
+        </figure>
+        <hr>
+        <h5>Ordered List</h5>
+        <ul>
+            <li>korn</li>
+            <li>totomae</li>
+            <li>spinch</li>
+        </ul>
+        <h5>Unordered list</h5>
+        <ol>
+            <li>broklee</li>
+            <li>onioni</li>
+            <li>pees</li>
+        </ol>
+        <h5>Menu</h5>
+        <menu>
+            <li>breakfast</li>
+            <li>lunch</li>
+            <li>dinner</li>
+        </menu>
+        <!-- bdi -->
+        <ul>
+            <li><bdi class="name">Tomate</bdi> is red</li>
+            <li><span class="name">Korn</span> is yellow</li>
+            <li><span class="name" dir="auto">Spinch</span> is spinch</li>
+        </ul>
+        <!-- bdr -->
+         <h5>IsPalindrom</h5>
+        <p>
+            <span dir="rtl">But my income</span>
+        </p>
+        <p>
+            <bdo dir="ltr">But my income</bdo>
+        </p>
+        <h5>Haiku</h5>
+        <p>
+            this is a poem<br />
+            it has three lines in total<br />
+            hope you like it <br />
+        </p>
     </main>
     <footer>
     </footer>
