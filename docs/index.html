@@ -3,20 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta n           <hr>
-        <!-- abbr -->
-        <h4>abbr</h4>
-        <yes-sir>It complete is a <b>great</b> day for writing trashy <abbr title="HTML">HTML!</abbr></yes-sir>
-        <hr>
-        <!-- Address -->
-        <h4>address</h4>hr>
-        <!-- abbr -->
-        <h4>abbr</h4>
-        <yes-sir>It complete is a <b>great</b> day for writing trashy <abbr title="HTNL">HTML!</abbr></yes-sir>="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some Title</title>
+    <!-- abbr -->
+    <h4>abbr</h4>
+    <yes-sir>It complete is a <b>great</b> day for writing trashy <abbr title="HTML">HTML!</abbr></yes-sir>
+    <hr>
+    <!-- Address -->
+    <h4>address</h4>
+    <!-- abbr -->
+    <h4>abbr</h4>
+    <yes-sir>It complete is a <b>great</b> day for writing trashy <abbr title="HTNL">HTML!</abbr></yes-sir>="viewport"
+    content="width=device-width, initial-scale=1.0">
     <!-- <base href="https://labkitchensink.com/" target="_blank"> -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- ERROR!: A link element must not appear as a descendant of a body element unless the link element has an itemprop attribute or has a rel attribute whose value contains dns-prefetch, modulepreload, pingback, preconnect, prefetch, preload, prerender, or stylesheet. -->
     <link rel="icon" type="image/x-icon" href="../img/kitchensink.ico">
-    <title>Basic HTML Layout</title>
+
+    <!-- ERROR!:  Element style not allowed as child of element body in this context. (Suppressing further errors from this subtree.)-->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -50,8 +55,11 @@
             font-size: 3em;
         }
     </style>
+
+<!-- ERROR!: Stray end tag head -->
 </head>
 
+<!-- ERROR!: Start tag body seen but an element of the same type was already open. -->
 <body>
     <header>
         <h1 id="main-header" data-school="USD" data-course="comp-305">Hello HTML World</h1>
@@ -64,12 +72,11 @@
     <my-school data-location="san-diego" data-type="university">
         <h1 id="university-name">USD</h1>
     </my-school>
-
+    <hr>
+    <!-- a -->
+     <h4>a</h4>
     <nav>
         <ul>
-            <hr>
-            <!-- a -->
-            <h4>a</h4>
             <li><a href="#dogs-or-cats">Jump to Dogs vs Cats Section</a></li>
         </ul>
     </nav>
@@ -92,7 +99,7 @@
         <hr>
         <!-- Address -->
         <address>
-            <a href="mailto:jdulce@sandiego.edu">jdulce@sandiego.edu</a><br />
+            <a href="mailto:jdulce@sandiego.edu">jdulce@sandiego.edu</a>
             <a href="tel:+18888888">+1 (888) 888-8888</a>
         </address>
         <hr>
@@ -249,6 +256,8 @@
         <h4>dfn, em, i</h4>
         <h5>some defimition</h5>
         <dfn>carrot
+
+            <!-- ERROR!: Element p not allowed as child of element dfn in this context. (Suppressing further errors from this subtree.) -->
             <p>
                 a <em>root</em><i> veg</i>
             </p>
@@ -306,6 +315,8 @@
         <hr>
         <!-- wbr -->
         <h4>wbr</h4>
+
+        <!-- ERROR!: Stray end tag wbr. -->
         <p>just a word<wbr>break</wbr></p>
         <hr>
         <!-- table, caption, thead, tbody, tfoot, tr, th, td -->
@@ -393,6 +404,8 @@
         <hr>
         <!-- video -->
         <h4>video</h4>
+
+         <!-- ERROR!: The frameborder attribute on the iframe element is obsolete -->
         <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=tVnJsCSXn2U9WtOt"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -470,11 +483,12 @@
         </form>
         <hr>
         <!-- selectedcontent -->
+
+        <!-- ERROR!: Element selectedcontent not allowed as child of element main in this context. (Suppressing further errors from this subtree.) -->
         <h4>selectedcontent</h4>
         <selectedcontent>
             <p>This is some selected content right here</p>
         </selectedcontent>
-
         <hr>
         <!-- details, summary -->
         <h4>details, summary</h4>
@@ -499,11 +513,13 @@
         <h4>dialog</h4>
         <dialog id="vegetable-info-dialog">
             <h3>Random Facts</h3>
-            <p>Did you know that tomatoes are technically veg, not vegetables? They're botanically classified as berries!</p>
-            <p>Carrots weren't originally orange - they came in purple, white, and yellow varieties. Orange carrots were developed in the Netherlands.</p>
+            <p>Did you know that tomatoes are technically veg, not vegetables? They're botanically classified as
+                berries!</p>
+            <p>Carrots weren't originally orange - they came in purple, white, and yellow varieties. Orange carrots were
+                developed in the Netherlands.</p>
             <button onclick="document.getElementById('vegetable-info-dialog').close()">Close</button>
         </dialog>
-        
+
         <button onclick="document.getElementById('vegetable-info-dialog').showModal()">Random Vegetable Fact</button>
     </main>
     <footer>
