@@ -14,10 +14,14 @@
             background-color: #f0f0f0;
         }
 
-        #nain-header {
+        #main-header {
             color: blue;
             text-align: center;
             font-size: large;
+        }
+
+        h1 {
+            color: red;
         }
 
         html {
@@ -31,17 +35,30 @@
         .name {
             color: red;
         }
+
+        #display-time {
+            font-weight: bold;
+            font-size: 3em;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1 id="main-header">Hello HTML World</h1>
+        <h1 id="main-header" data-school="USD" data-course="comp-305">Hello HTML World</h1>
+        <p id="display-time"></p>
+        <button onclick="displayTime()">Click Me</button>
         <hr>
         <p title="Did you mouse me?">Soon you will &hearts; HTML as much as I do!</p>
     </header>
+    <!-- Custom element with school name -->
+    <my-school data-location="san-diego" data-type="university">
+        <h1 id="university-name">USD</h1>
+    </my-school>
+
     <nav>
         <ul>
+            <hr>
             <!-- a -->
             <li><a href="#dogs-or-cats">Jump to Dogs vs Cats Section</a></li>
         </ul>
@@ -50,6 +67,7 @@
         <p>Another paragraph here
         <p>And another!
         <p>I r e a l l y like WHITESPACE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;don't you?</P>
+        <hr>
         <!-- pre -->
         <pre>
             What
@@ -57,13 +75,16 @@
         </pre>
         <p>This is fun isn't it?</p>
         <p>day ever!</p>
+        <hr>
         <!-- abbr -->
-        <yes-sir>It complete is a <b>great</b> day for writing trashy <abbr title="HTNL">HTML!</abbr></yes-sir>
+        <yes-sir>It complete is a <b>great</b> day for writing trashy <abbr title="HTML">HTML!</abbr></yes-sir>
+        <hr>
         <!-- Address -->
         <address>
             <a href="mailto:jdulce@sandiego.edu">jdulce@sandiego.edu</a><br />
             <a href="tel:+18888888">+1 (888) 888-8888</a>
         </address>
+        <hr>
         <!-- Article -->
         <article class="forecast">
             <h1>Todo LIst</h1>
@@ -84,21 +105,25 @@
             </article>
         </article>
         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+        <hr>
         <!-- Aside -->
         <aside>
             <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque
                 faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
         </aside>
+        <hr>
         <!-- Hgroup -->
         <hgroup id="dogs-or-cats">
             <h1>Dogs or Cats</h1>
             <p>(dogs are better)</p>
         </hgroup>
+        <hr>
         <!-- Section -->
         <section>
             <h3>This is a h3</h3>
             <p>There are many other headers</p>
         </section>
+        <hr>
         <!-- Search, Form, Label, button -->
         <h1>Vegetable Finder</h1>
         <search>
@@ -108,6 +133,7 @@
                 <button type="submit">Search</button>
             </form>
         </search>
+        <hr>
         <!-- Block Quote, Div -->
         <div>
             <blockquote cite="https://www.huxley.net/bnw/four.html">
@@ -118,6 +144,7 @@
             <p><i>—Francis Ortiz,</i> <cite>Comp 305</cite></p>
         </div>
         <p>Cryptids of Cornwall:</p>
+        <hr>
         <!-- dl, dt, dd -->
         <dl>
             <dt>Beast of Bodmin</dt>
@@ -129,7 +156,9 @@
             <dt>Owlman</dt>
             <dd>A giant owl-like creature.</dd>
         </dl>
+        <hr>
         <!-- hr -->
+        <hr>
         <hr>
         <!-- figure, img, figcaption -->
         <figure>
@@ -140,6 +169,7 @@
                         Vegetables</a></cite>
             </figcaption>
         </figure>
+        <hr>
         <hr>
         <!-- lists, s -->
         <h5>Ordered List</h5>
@@ -160,12 +190,14 @@
             <li>lunch</li>
             <li>dinner</li>
         </menu>
+        <hr>
         <!-- bdi -->
         <ul>
             <li><bdi class="name">Tomate</bdi> is red</li>
             <li><span class="name">Korn</span> is yellow</li>
             <li><span class="name" dir="auto">Spinch</span> is spinch</li>
         </ul>
+        <hr>
         <!-- bdr -->
         <h5>IsPalindrom</h5>
         <p>
@@ -180,6 +212,7 @@
             it has three lines in total<br />
             hope you like it <br />
         </p>
+        <hr>
         <!-- Data -->
         <p>Counting stars</p>
         <ul>
@@ -187,6 +220,7 @@
             <li><data value="2">2</data></li>
             <li><data value="43">3</data></li>
         </ul>
+        <hr>
         <!-- dfn, em, i -->
         <h5>some defimition</h5>
         <dfn>carrot
@@ -194,9 +228,11 @@
                 a <em>root</em><i> veg</i>
             </p>
         </dfn>
+        <hr>
         <!-- kbd, mark, q -->
         <p><mark>Bake the cake at: </mark><kbd>325 degrees for 10 minutes</kbd></p>
         <p><q>yum yum!</q></p>
+        <hr>
         <!-- rp, rt, ruby -->
         <p>Vegetable Pronunciations</p>
         <ul>
@@ -213,23 +249,31 @@
                     <rp>)</rp>
                 </ruby></li>
         </ul>
+        <hr>
         <!-- samp -->
         <p>The following code:<samp> console.log("Hello world!") </samp>is a hello world program</p>
+        <hr>
         <!-- small -->
         <p><strong>This is normal sized,</strong> <small>This is small sized</small></p>
+        <hr>
         <!-- sub, sup -->
         <p>A<sub>1</sub> steak sauce</p>
         <p>A<sup>99</sup> steak sauce</p>
+        <hr>
         <!-- time -->
         <p>Just some time: <time datetime="2025-09-28">Sept 28, 2025</time></p>
+        <hr>
         <!-- u -->
         <p>
             <u>Hello underline to see here</u>
         </p>
+        <hr>
         <!-- var -->
         <p><var>1</var><var>+</var><var>1</var><var>=</var><var>2</var></p>
+        <hr>
         <!-- wbr -->
         <p>just a word<wbr>break</wbr></p>
+        <hr>
         <!-- table, caption, thead, tbody, tfoot, tr, th, td -->
         <table>
             <caption>vegetable or fruit</caption>
@@ -270,6 +314,7 @@
                 </tr>
             </tfoot>
         </table>
+        <hr>
         <!-- colgroup, col -->
         <table>
             <caption>vegetable colors</caption>
@@ -293,24 +338,106 @@
                 <td>White</td>
             </tr>
         </table>
+        <hr>
         <!-- map, area -->
         <map name="vegetable-garden">
             <area shape="rect" coords="0,0,100,50" href="#carrots" alt="Carrot patch">
             <area shape="circle" coords="150,75,25" href="#tomatoes" alt="Tomato area">
             <area shape="poly" coords="200,0,250,50,200,100,150,50" href="#lettuce" alt="Lettuce bed">
         </map>
+        <hr>
         <!-- audio, track -->
         <audio controls>
             <source src="../audio/Mzg1ODMxNTIzMzg1ODM3_JzthsfvUY24.MP3" type="audio/mpeg">
             <track kind="captions" src="../captions/chopping-en.vtt" srclang="en" label="English">
-            asmr chopping video        
+            asmr chopping video
         </audio>
+        <hr>
         <!-- video -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=tVnJsCSXn2U9WtOt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=tVnJsCSXn2U9WtOt"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <hr>
+        <!-- form, fieldset, legend, label, input, button -->
+        <form action="/submit-garden" method="post">
+            <fieldset>
+                <legend>Favorite Vegetable Submission</legend>
+                <label for="submission-name">Submission Name:</label>
+                <input type="text" id="submission-name" name="submission-name" required>
 
+                <label for="favorite-veg">Favorite Vegetable:</label>
+                <input type="text" id="favorite-veg" name="favorite-veg" list="veg-suggestions">
+                <hr>
+                <!-- datalist -->
+                <datalist id="veg-suggestions">
+                    <option value="Carrot">
+                    <option value="Broccoli">
+                    <option value="Spinach">
+                    <option value="Tomato">
+                    <option value="Other"></option>
+                </datalist>
+                <button type="submit">Cast Vote</button>
+            </fieldset>
+        </form>
+        <!-- select, optgroup, option -->
+        <form>
+            <label for="vegetable-color">Vegetable By Color:</label>
+            <select id="vegetable-color" name="vegetable-color">
+                <optgroup label="Green">
+                    <option value="lettuce">Lettuce</option>
+                    <option value="cabbage" selected>Cabbage</option>
+                    <option value="kale">Kale</option>
+                </optgroup>
+                <optgroup label="Not Green">
+                    <option value="potato">Potato</option>
+                    <option value="tomato">Tomato</option>
+                    <option value="carrot">Carrot</option>
+                </optgroup>
+            </select>
+        </form>
+        <hr>
+        <!-- textarea -->
+        <form>
+            <label for="diary-notes">Diary Notes:</label>
+            <textarea id="diary-notes" name="diary-notes" rows="6" cols="55" placeholder="Dear Diary..."></textarea>
+        </form>
+        <hr>
+        <!-- meter -->
+        <p>Diary Progress:</p>
+        <label for="diary-entries">Number of entries:</label>
+        <meter id="diary-entries" value="5" min="0" max="10"></meter>
+        <hr>
+        <!-- progress -->
+        <p>Number of Diaries:</p>
+        <label for="diary-count">Diaries:</label>
+        <progress id="diary-count" value="99" max="100"></progress>
+        <hr>
+        <!-- output -->
+        <form oninput="result.value = (parseInt(carrots.value) || 0) + (parseInt(tomatoes.value) || 0)">
+            <label for="carrots">carrots harvested:</label>
+            <input type="number" id="carrots" name="carrots" value="1">
+
+            <label for="tomatoes">Tomatoes harvested:</label>
+            <input type="number" id="tomatoes" name="tomatoes" value="3">
+
+            <output name="result" for="carrots tomatoes">4</output> total vegetables
+        </form>
+        <hr>
+        <!-- selectedcontent -->
+        <selectedcontent>
+            <p>This is some selected content right here</p>
+        </selectedcontent>
     </main>
     <footer>
     </footer>
+    <script>
+        function displayTime() {
+            const currentTime = new Date();
+            const timeElement = document.getElementById('display-time');
+            timeElement.textContent = 'it is: ' + now.toLocaleString();
+        }
+    </script>
 </body>
 
 </html>
